@@ -1,0 +1,257 @@
+<?php
+include("function.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rajiv Chaudhary's Website</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" media="screen and (max-width:800px)" 
+        href="tablet.css">
+        <script src="https://kit.fontawesome.com/0b6549b520.js" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" charset="utf-8"></script>
+        <link rel="stylesheet" media="screen and (max-width:530px)" href="phone.css">
+        <link rel="icon" href="Rc.jpg" type="image/gif/jpg">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <input type="checkbox" id="check">
+        <!-- header area start -->
+        <header>
+            <label for="check">
+                <i class="fa-solid fa-bars" id="sidebar_btn"></i>
+            </label>
+            <div class="left_area">
+                <h3>Coding <span>Nepal</span></h3>
+            </div>
+        </header>
+        <!-- header area end -->
+        <!-- mobile navigation bar start -->
+        <div class="mobile_nav">
+            <div class="nav_bar">
+                <img src="rajiv1.jpg" class="mobile_profile_image" alt="error">
+                <i class="fa fa-bars nav_btn"></i>
+            </div>
+            <div class="mobile_nav_items">
+            <a href="#home"><i class="fa-solid fa-house-user"></i><span>Home</span></a>
+            <a href="#about"><i class="fa-solid fa-address-card"></i><span>About Me</span></a>
+            <a href="#portfolio"><i class="fa-solid fa-desktop"></i><span>Portfolio</span></a>
+            <a href="#contact"><i class="fa-solid fa-address-book"></i><span>Contact</span></a>
+            </div>
+        </div>
+        <!-- mobile navigation bar end -->
+        <!-- slider start -->    
+        <div class="sidebar">
+            <div class="profile_info">
+                <img src="rajiv.jpg" class="profile_image" alt="">
+                <h4>Rajiv</h4>
+            </div>
+            <a href="#home"><i class="fa-solid fa-house-user"></i><span>Home</span></a>
+            <a href="#about"><i class="fa-solid fa-address-card"></i><span>About Me</span></a>
+            <a href="#portfolio"><i class="fa-solid fa-desktop"></i><span>Portfolio</span></a>
+            <a href="#contact"><i class="fa-solid fa-address-book"></i><span>Contact</span></a>
+        </div>
+        <!-- slider end -->
+        <section id="home">
+        <div class="content">
+            <div class="card">
+        
+                <h1 class="headings">I AM <br> RAJIV CHAUDHARY</h1>
+
+                <a href="CV.pdf" class="btn" id="btnDownload">Download CV<span></span></a>
+
+                <script>
+                    
+                    let button = document.querySelector(".card a");
+                    button.addEventListener("click",()=>{
+                        const span = document.querySelector(".card a span");
+                        button.style.paddingRight = '10px';
+                        span.style.visibility ="visible";
+                        setTimeout(()=>{
+                            span.style.visibility="hiddin;";
+                            button.style.transition = "1s ease-in-out";
+                            button.style.paddingRight = "0px";
+                        },3000);
+                    })
+
+                </script>
+            </div>
+        </div>
+        </section>
+        
+        <section id="about">
+            <div id="pic">
+                <h1 class="headings">ABOUT ME</h1>
+                <img src="rajiv.jpg" alt="">
+                <div id="intro">
+                    <h2>RAJIV CHAUDHARY</h2>
+                    <p>
+                        Hi!
+                        First of all, thank you for visiting my website. My name is Rajiv Chaudhary. 
+                        I am basically from Nepal but currently staying in Punjab, India. 
+                        I did my diploma in CSE from Lovely Professional University, Punjab and I have done 
+                        computer training course from Dhagadhi College of Information Technology Prithavipur 8, Kailari, Nepal. 
+                        Currently I am pursuing B.Tech in LPU. I belong to a middle class family.
+                        My hobbies are listening to music, playing video games, Traveling etc.
+                        My sort term goal is to get a job in a reputed company in which I can grow my working 
+                        skills and get more and more knowledge which helps me in future.
+                        My long term goal is to achieve a good position in the organization. And
+                        my uniqueness is I am trying to do a complex problem and Analyzing and Focusing on different different things. 
+                        That's all about me. Thanks again!
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        
+        <div id="portfolio">
+            <h1 class="headings">PROJECT</h1>
+            <!-- image slider start -->
+            <div class="slider">
+                <div class="slides">
+                    <!-- radio button start -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!-- radio button end -->
+                    <!--slide images start -->
+                <div class="slide first">
+                    <img src="p3.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="p4.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="p2.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="p7.png" alt="">
+                </div>
+                <!--slide images end-->
+                <!-- automatic navigation start-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+                <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+            <!--manual navigation end-->
+            </div>
+            <!--image slider end -->
+        </div>
+        
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function(){
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if(counter > 4){
+                    counter = 1;
+                }
+            }, 5000);
+                
+        </script>
+    
+        
+        <section id="contact">
+            <h1 class="headings">CONTACT</h1>
+            <form id="my-form" action="https://formspree.io/f/mjvzvyay" method="post" class="form">
+                <input type="text" id="name" name="name" class="input" placeholder="Enter Your Name" required>
+                <input type="email" id="email" name="email" class="input" 
+                placeholder="Enter Your Email" required> 
+                <textarea name="msg" id="msg" cols="30" rows="10"
+                placeholder="Enter Your Message" required></textarea>  
+                <button name="submit" id="send">Send</button>
+                <p id="my-form-status"></p>
+                
+            </form>
+
+            <script>
+                var form = document.getElementById("my-form");
+                
+                async function handleSubmit(event) {
+                  event.preventDefault();
+                  var status = document.getElementById("my-form-status");
+                  var data = new FormData(event.target);
+                  fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                  }).then(response => {
+                    if (response.ok) {
+                      status.innerHTML = "Thanks for your submission!";
+                      form.reset()
+                    } else {
+                      response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                          status.innerHTML = "Oops! There was a problem submitting your form"
+                        }
+                      })
+                    }
+                  }).catch(error => {
+                    status.innerHTML = "Oops! There was a problem submitting your form"
+                  });
+                }
+                form.addEventListener("submit", handleSubmit)
+            </script>
+        </section>
+            <!-- This is  php code section -->
+            
+
+
+            
+           <!-- Prevent for resubmission form after refreshing -->
+           <script>
+            if(window.history.replaceState){
+                window.history.replaceState(null, null, window.location.href)
+            }
+           </script>
+        
+        
+        <section class="footer">
+        <nav class="social">
+            <a href="https://www.facebook.com/profile.php?id=100051386390376" target="_blank">
+            <i class="fa -brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/rajivchaudhary501/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCT7jEQiQ2cg6az5ZvoAwL4Q" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+            </a>
+            
+        </nav>
+        <div class="slidetext">
+            <marquee behavior="scrool" direction="left"><p>Thanks for visiting my Website</p></marquee>
+        </div>
+        <p class="copyright">copyright@rajivchaudhary</p>
+        </section>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.nav_btn').click(function(){
+                    $('.mobile_nav_items').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+</html>
